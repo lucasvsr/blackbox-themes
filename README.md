@@ -11,7 +11,7 @@ Only two things:
 You can install using this command:
 ```console
 
-sh -c "$(wget -nv -q -O- https://raw.githubusercontent.com/lucasvsr/blackbox-themes/develop/src/install.sh)"
+sh -c "$(wget -nv -q -O- https://raw.githubusercontent.com/lucasvsr/blackbox-themes/main/src/install.sh)"
 
 ```
 
