@@ -79,7 +79,7 @@ check() {
     if ! has_app "$1" 
     then
 
-        warn "${BIRed}Please, install wget!" && return 1
+        warn "${BIRed}Please, install $1!" && return 1
         
     fi
 
