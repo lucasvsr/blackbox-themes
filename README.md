@@ -1,5 +1,5 @@
 # blackbox-theme: A BlackBox theme manager
-Use this repo as theme-chooser e make your BlackBox Terminal more awesome!
+Use this repo as theme-chooser and make your BlackBox Terminal more awesome!
 
 ## Prerequisites
 Only two things:
