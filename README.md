@@ -30,7 +30,7 @@ blackbox-theme <theme>
 
 The theme should be downloaded at `$BLACKBOX_THEMES_DIR`.
 
-#### Manually
+### Manually
 You can go at `src/palletes` and copy the content of the theme you want, create a file `.json` in `$BLACKBOX_THEMES_DIR`.
 
 For now, in both cases, you need to close and reopen to see your theme at Theme seccion in settings.
