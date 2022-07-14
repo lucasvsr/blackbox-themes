@@ -41,10 +41,18 @@ download() {
     local url=$REPO
     local dest=$BLACKBOX_THEMES_DIR
 
-    info "Looking for the theme"
+    if -d $BLACKBOX_THEMES_DIR 
+    then
 
-    wget -nv -q $url/"$1".json -O $dest/"$1".json &&
-    success "Theme ${BGreen}$1 ${Color_off}downloaded at BlackBox Theme Directory" || error "Theme $1 not founded"
+        info "Looking for the theme"
+        wget -nv -q $url/"$1".json -O $dest/"$1".json &&
+        success "Theme ${BGreen}$1 ${Color_off}downloaded at BlackBox Theme Directory" || error "Theme $1 not founded"
+
+    else
+
+        error "Please, install BlackBox for use blackbox-themes."
+        
+    fi
 
 }
 
