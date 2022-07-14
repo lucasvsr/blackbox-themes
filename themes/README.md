@@ -1,4 +1,4 @@
 # Themes
 
-**gruvbox**![gruvbox](images/Gruvbox.png) | **nord**![gruvbox](images/Nord.png) 
+**gruvbox**![gruvbox](images/gruvbox.png) | **nord**![gruvbox](images/nord.png) 
 :---------------------------------------------:|:----------------------------------------------:
