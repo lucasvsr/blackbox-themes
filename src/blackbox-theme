@@ -1,0 +1,70 @@
+#! /usr/bin/env bash
+
+REPO="https://raw.githubusercontent.com/lucasvsr/blackbox-themes/main/src/palletes/"
+
+# Regular Colors
+Black='\033[0;30m'  # Black
+Red='\033[0;31m'    # Red
+Green='\033[0;32m'  # Green
+Yellow='\033[0;33m' # Yellow
+Blue='\033[0;34m'   # Blue
+Purple='\033[0;35m' # Purple
+Cyan='\033[0;36m'   # Cyan
+White='\033[0;37m'  # White
+
+Color_off='\033[0m' # Text Reset
+
+BGreen='\033[1;32m'  # Green
+
+msg() {
+    printf '%b\n' "$1" >&2
+}
+
+success() {
+    msg "${Green}✔ ${Color_off} ${1}${2}"
+}
+
+info() {
+    msg "${Blue}➭ ${Color_off} ${1}${2}"
+}
+
+error() {
+    msg "${Red}✘ ${Color_off} ${1}${2}" && return 1
+}
+
+warn() {
+    msg "${Yellow}⚠ ${Color_off} ${1}${2}"
+}
+
+download() {
+
+    local url=$REPO
+    local dest=$BLACKBOX_THEMES_DIR
+
+    if -d $BLACKBOX_THEMES_DIR 
+    then
+
+        info "Looking for the theme"
+        wget -nv -q $url/"$1".json -O $dest/"$1".json &&
+        success "Theme ${BGreen}$1 ${Color_off}downloaded at BlackBox Theme Directory" || error "Theme $1 not founded"
+
+    else
+
+        error "Please, install BlackBox for use blackbox-themes."
+        
+    fi
+
+}
+
+main() {
+
+    for theme in $@
+    do
+        
+        download $theme
+
+    done    
+
+}
+
+main $@
