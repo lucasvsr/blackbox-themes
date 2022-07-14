@@ -41,7 +41,7 @@ download() {
     local url=$REPO
     local dest=$BLACKBOX_THEMES_DIR
 
-    if [ -d $BLACKBOX_THEMES_DIR ] 
+    if [ -d "$BLACKBOX_THEMES_DIR" ] 
     then
 
         info "Looking for the theme"
