@@ -5,7 +5,7 @@ Use this repo as theme-chooser and make your BlackBox Terminal more awesome!
 Only two things:
 
 - `wget` should be installed
-- `blackbox` should be installed
+- [`blackbox`](https://gitlab.gnome.org/raggesilver/blackbox/) should be installed
 
 ## Using
 
