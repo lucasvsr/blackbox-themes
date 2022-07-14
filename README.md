@@ -17,7 +17,7 @@ sh -c "$(wget -nv -q -O- https://raw.githubusercontent.com/lucasvsr/blackbox-the
 
 #### CLI
 
-Choose a theme in [themes](themes/README.md) showcase and use the command:
+Choose a theme in [`themes`](themes/README.md) showcase and use the command:
 ```console
 blackbox-theme <theme>
 ```
@@ -27,7 +27,7 @@ blackbox-theme <theme>
 The theme should be downloaded at `$BLACKBOX_THEMES_DIR`.
 
 ### Manually
-You can go at `src/palletes` and copy the content of the theme you want, create a file `.json` in `$BLACKBOX_THEMES_DIR`.
+You can go at [`src/palletes`](src/palettes/) and copy the content of the theme you want, create a file `.json` in `$BLACKBOX_THEMES_DIR`.
 
 For now, in both cases, you need to close and reopen to see your theme at Theme seccion in settings.
 
