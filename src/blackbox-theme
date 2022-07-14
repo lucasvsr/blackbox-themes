@@ -1,7 +1,6 @@
 #! /usr/bin/env bash
 
-# REPO="https://raw.githubusercontent.com/lucasvsr/blackbox-themes/main/src/palletes/"
-REPO="https://raw.githubusercontent.com/storm119/Tilix-Themes/master/Themes/"
+REPO="https://raw.githubusercontent.com/lucasvsr/blackbox-themes/main/src/palletes/"
 
 # Regular Colors
 Black='\033[0;30m'  # Black
