@@ -16,7 +16,7 @@ sh -c "$(wget -nv -q -O- https://raw.githubusercontent.com/lucasvsr/blackbox-the
 ```
 
 ## Using
-Choose a theme in our themes folder and use the command:
+Choose a theme in `themes` folder and use the command:
 ```console
 
 blackbox-theme <theme>
