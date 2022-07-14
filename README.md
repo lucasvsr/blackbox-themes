@@ -23,6 +23,8 @@ blackbox-theme <theme>
 
 ```
 
+![command](src/utils/gifs/command.gif)
+
 The theme should be downloaded at `$BLACKBOX_THEMES_DIR` and, for now, you need to close and reopen to see your theme at Theme seccion in settings.
 
 ## Add your theme in this repo
