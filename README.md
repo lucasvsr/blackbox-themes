@@ -12,18 +12,14 @@ Only two things:
 ### Installing the CLI tool
 You can install using this command:
 ```console
-
 sh -c "$(wget -nv -q -O- https://raw.githubusercontent.com/lucasvsr/blackbox-themes/main/src/install.sh)"
-
 ```
 
 #### CLI
 
 Choose a theme in [themes](themes/README.md) showcase and use the command:
 ```console
-
 blackbox-theme <theme>
-
 ```
 
 ![command](src/utils/gifs/command.gif)
