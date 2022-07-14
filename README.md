@@ -5,7 +5,7 @@ Use this repo as theme-chooser and make your BlackBox Terminal more awesome!
 Only two things:
 
 - `wget` should be installed
-- [`blackbox`](https://gitlab.gnome.org/raggesilver/blackbox/) should be installed
+- [`BlackBox`](https://gitlab.gnome.org/raggesilver/blackbox/) should be installed
 
 ## Using
 
@@ -27,9 +27,9 @@ blackbox-theme <theme>
 The theme should be downloaded at `$BLACKBOX_THEMES_DIR`.
 
 ### Manually
-You can go at [`src/palletes`](src/palettes/) and copy the content of the theme you want, create a file `.json` in `$BLACKBOX_THEMES_DIR`.
+You can go at [`src/palletes`](src/palettes/) and copy the content of the theme you want and create a file `.json` in `$BLACKBOX_THEMES_DIR`.
 
-For now, in both cases, you need to close and reopen to see your theme at Theme seccion in settings.
+For now, in both cases, you need to close and reopen BlackBox to see your theme at Theme seccion in settings.
 
 ## Add your theme in this repo
 You can add your theme in this repo just:
