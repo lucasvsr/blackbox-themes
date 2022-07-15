@@ -34,6 +34,8 @@ For now, in both cases, you need to close and reopen BlackBox to see your theme 
 ## Add your theme in this repo
 You can add your theme in this repo just:
 
-- Creating a new branch and add you `theme.json` in `src/palettes`
-- Add a screenshot in  `themes/images` and edit the `themes/README.md` with the image you just add.
+- Creating a new branch
+- Add you `theme.json` in `src/palettes`
+- Add a screenshot in  `themes/images` 
+- Edit the `themes/README.md` with the image you just add.
 - Make a pull-request at `main` branch
