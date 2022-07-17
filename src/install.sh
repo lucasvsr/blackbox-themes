@@ -95,7 +95,7 @@ main() {
     warn "We need sudo permission to continue..."
     cp_usr_bin "$DIR/$BIN" &&
     rm -rf $pwd/install.sh &&
-    exec $SHELL
+    success "blackbox-themes installed"
     
 }
 
