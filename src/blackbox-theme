@@ -46,11 +46,12 @@ download() {
 
         info "Looking for the theme"
         wget -nv -q $url/"$1".json -O "$dest/$1.json" &&
-        success "Theme ${BGreen}$1 ${Color_off}downloaded at BlackBox Themes Directory" || error "Theme $1 not founded"
+        success "Theme ${BGreen}$1 ${Color_off}downloaded at BlackBox Themes Directory" || 
+        (rm -rf $dest/"$1".json && error "Theme $1 not founded")
 
     else
 
-        error "Please, install BlackBox for use blackbox-themes."
+        error "Please, install or update BlackBox for use blackbox-themes."
         
     fi
 
