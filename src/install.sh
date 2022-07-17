@@ -68,7 +68,7 @@ mkexec() {
 
 cp_usr_bin() {
 
-    sudo mv $1 /usr/bin/ && rm -rf $(dirname $1)
+    sudo mv $1 /usr/bin/ && rm -rf "$(dirname $1)"
 
 }
 
