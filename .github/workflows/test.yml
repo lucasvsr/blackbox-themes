@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - name: Install black-box themes
+      - name: Install blackbox-themes
         run: sh -c "$(wget -nv -q -O- https://raw.githubusercontent.com/lucasvsr/blackbox-themes/main/src/install.sh)"
       - name: Verify the installation
         run: test -f /usr/bin/blackbox-theme && echo "blackbox-theme is installed!"
