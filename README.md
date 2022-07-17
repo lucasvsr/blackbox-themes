@@ -31,7 +31,7 @@ You can go at [`src/palletes`](src/palettes/) and copy the content of the theme 
 
 For now, in both cases, you need to close and reopen BlackBox to see your theme at Theme seccion in settings.
 
-## Add your theme in this repo
+## 💡 Add your theme in this repo
 You can add your theme in this repo just:
 
 - Creating a new branch
