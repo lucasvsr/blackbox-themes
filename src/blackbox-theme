@@ -1,20 +1,17 @@
 #! /usr/bin/env bash
 
 REPO="https://raw.githubusercontent.com/lucasvsr/blackbox-themes/main/src/palettes/"
+VERSION="1.0"
 
 # Regular Colors
-Black='\033[0;30m'  # Black
 Red='\033[0;31m'    # Red
 Green='\033[0;32m'  # Green
 Yellow='\033[0;33m' # Yellow
 Blue='\033[0;34m'   # Blue
-Purple='\033[0;35m' # Purple
-Cyan='\033[0;36m'   # Cyan
-White='\033[0;37m'  # White
 
 Color_off='\033[0m' # Text Reset
 
-BGreen='\033[1;32m'  # Green
+BGreen='\033[1;32m' # Green
 
 msg() {
     printf '%b\n' "$1" >&2
@@ -41,31 +38,60 @@ download() {
     local url=$REPO
     local dest=$BLACKBOX_THEMES_DIR
 
-    if [ -d "$BLACKBOX_THEMES_DIR" ];
-    then
+    if [ -d "$BLACKBOX_THEMES_DIR" ]; then
 
         info "Looking for the theme"
         wget -nv -q $url/"$1".json -O "$dest/$1.json" &&
-        success "Theme ${BGreen}$1 ${Color_off}downloaded at BlackBox Themes Directory" || 
-        (rm -rf $dest/"$1".json && error "Theme $1 not founded")
+            success "Theme ${BGreen}$1 ${Color_off}downloaded at BlackBox Themes Directory" ||
+            (rm -rf $dest/"$1".json && error "Theme $1 not founded")
 
     else
 
         error "Please, install or update BlackBox for use blackbox-themes."
-        
+
     fi
+
+}
+
+loop_down() {
+
+    for theme in "$@"; do
+
+        download $theme
+
+    done
+
+}
+
+help() {
+
+    info "Go on https://github.com/lucasvsr/blackbox-themes/blob/main/themes/README.md" 
+    info "Choose the theme you want, pick the name"
+    info "Type: ${BGreen}blackbox-theme <name>${Color_off} and the theme will be downloaded."
+
+}
+
+version() {
+
+    info "blackbox-theme is on ${BGreen}v${VERSION}${Color_off}"
 
 }
 
 main() {
 
-    for theme in $@
-    do
-        
-        download $theme
+    while getopts ":hv" option; do
+        case $option in
+        h) help
+           exit
+            ;;
+        v) version
+            exit
+            ;;
+        esac
+    done
 
-    done    
+    loop_down "$@"
 
 }
 
-main $@
+main "$@"
