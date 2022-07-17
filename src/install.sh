@@ -68,9 +68,7 @@ mkexec() {
 
 cp_usr_bin() {
 
-    echo $1
-
-    sudo mv $1 /usr/bin/ && rm -rf $(dirname $1)
+    sudo mv $1 /usr/bin/ && rm -rf "$(dirname $1)"
 
 }
 
@@ -79,7 +77,7 @@ check() {
     if ! has_app "$1" 
     then
 
-        warn "${BIRed}Please, install wget!" && return 1
+        warn "${BIRed}Please, install $1!" && return 1
         
     fi
 
@@ -95,7 +93,7 @@ main() {
     warn "We need sudo permission to continue..."
     cp_usr_bin "$DIR/$BIN" &&
     rm -rf $pwd/install.sh &&
-    exec $SHELL
+    success "blackbox-themes installed"
     
 }
 

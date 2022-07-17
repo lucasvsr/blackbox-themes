@@ -1,0 +1,25 @@
+{
+    "name": "GitHub Night",
+    "comment": "Ported for Trilix Colour Scheme",
+    "use-theme-colors": false,
+    "foreground-color": "#9DA7B2",
+    "background-color": "#22272E",
+    "palette": [
+         "#22272E",
+		 "#cc241d",
+		 "#98971a",
+		 "#d79921",
+		 "#458588",
+		 "#b16286",
+		 "#689d6a",
+		 "#a89984",
+		 "#928374",
+		 "#fb4934",
+		 "#b8bb26",
+		 "#fabd2f",
+		 "#83a598",
+		 "#d3869b",
+		 "#8ec07c",
+		 "#9DA7B2"
+    ]
+}
