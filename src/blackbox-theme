@@ -1,7 +1,7 @@
 #! /usr/bin/env bash
 
 REPO="https://raw.githubusercontent.com/lucasvsr/blackbox-themes/main/src/palettes/"
-REPO_VERSION="https://raw.githubusercontent.com/lucasvsr/blackbox-themes/feature/update/src/version"
+REPO_VERSION="https://raw.githubusercontent.com/lucasvsr/blackbox-themes/main/src/version"
 VERSION="1.0"
 
 # Regular Colors
@@ -41,7 +41,9 @@ check-version() {
 
     if [[ "${VERSION}" != "${VERSION_REPO}" ]]; then
 
-         return 0
+        info "Seems that your blackbox-themes isn't updated"
+
+        return 0
 
     fi
 
@@ -62,7 +64,10 @@ update() {
     info "Updating blackbox-theme"
 
     wget -nv -q $url -O $dest/"$BIN" &&
-    success "${BGreen}blackbox-theme ${Color_off}updated" || error "Was not possible update blackbox-theme"
+    warn "We need sudo permission" &&
+    chmod 777 $dest/"$BIN" && sudo mv $dest/"$BIN" /usr/bin/"$BIN" &&
+    success "${BGreen}blackbox-theme ${Color_off}updated" || error "Was not possible update blackbox-theme" &&
+    rm -rf $dest
 
 }
 
