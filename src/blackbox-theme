@@ -44,6 +44,8 @@ check-version() {
          return 0
 
     fi
+
+    rm -rf /tmp/version
    
     return 1
 
