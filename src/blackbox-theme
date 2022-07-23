@@ -1,6 +1,7 @@
 #! /usr/bin/env bash
 
 REPO="https://raw.githubusercontent.com/lucasvsr/blackbox-themes/main/src/palettes/"
+REPO_VERSION="https://raw.githubusercontent.com/lucasvsr/blackbox-themes/feature/update/src/version/"
 VERSION="1.0"
 
 # Regular Colors
@@ -33,10 +34,42 @@ warn() {
     msg "${Yellow}⚠ ${Color_off} ${1}${2}"
 }
 
+check-version() {
+
+    wget -nv -q $REPO_VERSION -O /tmp/version &&
+    source /tmp/version
+
+    if [[ "${VERSION}" != "${VERSION_REPO}" ]]; then
+
+         return 0
+
+    fi
+   
+    return 1
+
+}
+
+update() {
+
+    local url="https://raw.githubusercontent.com/lucasvsr/blackbox-themes/main/src/blackbox-theme"
+    local dest="$HOME/.blackbox-theme-temp"
+    local BIN="blackbox-theme"
+
+    mkdir -p $dest
+
+    info "Updating blackbox-theme"
+
+    wget -nv -q $url -O $dest/"$BIN" &&
+    success "${BGreen}blackbox-theme ${Color_off}updated" || error "Was not possible update blackbox-theme"
+
+}
+
 download() {
 
     local url=$REPO
     local dest=$BLACKBOX_THEMES_DIR
+
+    check-version && update
 
     if [ -d "$BLACKBOX_THEMES_DIR" ]; then
 
