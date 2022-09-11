@@ -6,4 +6,5 @@
 **gnome-console-hacker**![gnome-console-hacker](images/gnome-console-hacker.png)
 **gnome-console-day**![gnome-console-day](images/gnome-console-day.png)
 **ayu-mirage**![ayu-mirage](images/ayu-mirage.png)
+**manjaro**![manjaro](images/manjaro.png)
 
